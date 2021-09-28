@@ -50,3 +50,41 @@ body {
   margin-right: 20px;
 }
 
+/*content items*/
+
+#content {
+  background-color: green;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.drinks-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+/* Items dos drinks*/
+
+.drink {
+  width: 200px;
+  height: 200px;
+  background-color: #fff ;
+  border-radius: 20px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.815);
+}
+
+.drink-img {
+  width: 170px;
+  height: 150px;
+  border-radius: 10px;
+}
+
+.drink span {
+  margin-top: 10px;
+}
+
