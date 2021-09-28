@@ -1,4 +1,5 @@
 const searchButton = document.querySelector('#search-btn');
+const randomButton = document.querySelector('#random-button');
 
 const getDrinkByName = async (drink) => {
   const API_URL = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=';
@@ -11,6 +12,14 @@ const getDrinkByName = async (drink) => {
 const getDrinkByIngredient = async (ingredient) => {
   const API_URL = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=';
   const res = await fetch(`${API_URL}${ingredient}`);
+  const data = await res.json();
+
+  return data;
+};
+
+const getRandomDrink = async () => {
+  const API_URL = 'https://www.thecocktaildb.com/api/json/v1/1/random.php';
+  const res = await fetch(API_URL);
   const data = await res.json();
 
   return data;
@@ -38,7 +47,7 @@ const clearDrinksSection = () => {
 }
 
 const renderClaudiaoError = () => {
-  
+
 }
 
 const renderDrink = async (searchType, search) => {
@@ -65,6 +74,13 @@ searchButton.addEventListener('click', (event) => {
   const inputValue = document.querySelector('#search-input').value;
 
   renderDrink(searchSelected, inputValue);
+});
+
+randomButton.addEventListener('click', async (event) => {
+  event.preventDefault();
+  clearDrinksSection();
+  const resObj = await getRandomDrink();
+  createDrink(resObj.drinks[0]);
 })
 
 window.onload = () => {
