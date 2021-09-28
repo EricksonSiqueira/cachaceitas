@@ -36,9 +36,10 @@ const renderDrink = async (searchType, search) => {
       const newDrink = await getDrinkByName(search);
       newDrink.drinks.forEach((drink) => createDrink(drink));
     } catch (error){
-      
+
     }
   } else if (searchType === 'ingredient') {
+    clearDrinksSection();
 
   }
 }

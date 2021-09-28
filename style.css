@@ -66,8 +66,8 @@ body {
 /* Items dos drinks*/
 
 .drink {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   background-color: #fff ;
   border-radius: 20px;
   margin: 10px;
@@ -86,5 +86,6 @@ body {
 
 .drink span {
   margin-top: 10px;
+  text-align: center;
 }
 
