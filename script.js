@@ -1,5 +1,7 @@
 const searchButton = document.querySelector('#search-btn');
 const randomButton = document.querySelector('#random-button');
+const hiddenButton = document.querySelector('.modal-close');
+const modal = document.querySelector('#modal-drink');
 
 const getDrinkByName = async (drink) => {
   const API_URL = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=';
@@ -24,6 +26,7 @@ const getRandomDrink = async () => {
 
   return data;
 };
+
 
 const getDrinkById = async (id) => {
   const API_URL = 'https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=';
@@ -67,12 +70,12 @@ const getItensForPopUp = async ({ target }) => {
 
   const ingredients = getIngredientsArr(drink);
   const measures = getMeasuresArr(drink);
-  
+
   createPopUpDrink(drink, ingredients, measures);
 }
 
-const createPopUpDrink = ({ strInstructions, strDrinkThumb, strDrink, strGlass },ingredients, measures) => {
-  
+const createPopUpDrink = ({ strInstructions, strDrinkThumb, strDrink, strGlass }, ingredients, measures) => {
+
 }
 
 const createDrink = async ({ strDrinkThumb, strDrink, idDrink }) => {
@@ -117,6 +120,15 @@ const renderDrink = async (searchType, search) => {
 
   }
 }
+
+
+const hiddenModal = () => {
+  modal.classList.toggle("show");
+  modal.classList.add('hide');
+}
+
+modal.addEventListener('click', hiddenModal);
+hiddenButton.addEventListener('click', hiddenModal);
 
 searchButton.addEventListener('click', (event) => {
   event.preventDefault();

@@ -15,7 +15,44 @@
 </head>
 
 <body>
-  <div id="modal-drink" class="modal-container">
+  <header id="header">
+    <div class="logo-container">
+      <img src="./imagens/cachaceitasv3.png" class="logo-img"></img>
+    </div>
+  </header>
+  <main id="content">
+    <form id="form-search">
+      <select class="select">
+        <option value="name">Bebida</option>
+        <option value="ingredient">Ingrediente</option>
+      </select>
+      <input id="search-input" type="text" placeholder="bebida / ingrediente">
+      <button id="search-btn" class="btn">Procurar</button>
+      <button id="random-button" class="btn">Aleatório</button>
+    </form>
+    <section class="drinks-section">
+    </section>
+  </main>
+  <!-- <footer>
+    <nav>
+      <sectio class="rodape">
+        <div class="social-container">
+          <ul class="social-list">
+            <li class="list-item"><a target="_blank" href="https://www.linkedin.com/in/claudiocassimiro/">Cláudio</a></li>
+            <li class="list-item"><a target="_blank" href="https://www.linkedin.com/in/wilian-pereira-95732b3a/">Wilian</a>
+            </li>
+            <li class="list-item"><a target="_blank" href="https://www.linkedin.com/in/danielmondaini/">Daniel</a></li>
+            <li class="list-item"><a target="_blank" href="https://www.linkedin.com/in/iago-mesquita-bbb8028b/">Iago</a>
+            </li>
+            <li class="list-item"><a target="_blank" href="https://www.linkedin.com/in/ericksonsiqueira/">Erickson</a></li>
+            <li class="list-item"><a target="_blank" href="https://www.linkedin.com/in/jessebenevides/">Jessé</a></li>
+          </ul>
+        </div>
+        <p>A developer service by: Inimigos da produtividade</p>
+      </section>
+    </nav>
+  </footer> -->
+  <div id="modal-drink" class="modal-container show">
     <div class="modal">
       <div class="top">
         <img class="drink-img-modal" src="https://www.thecocktaildb.com/images/media/drink/ypl13s1504890158.jpg"
@@ -36,45 +73,6 @@
       <button class="modal-close">X</button>
     </div>
   </div>
-  <header id="header">
-    <div class="logo-container">
-      <img src="./imagens/cachaceitasv3.png" class="logo-img"></img>
-    </div>
-  </header>
-  <main id="content">
-    <form id="form-search">
-      <select class="select">
-        <option value="name">Bebida</option>
-        <option value="ingredient">Ingrediente</option>
-      </select>
-      <input id="search-input" type="text" placeholder="bebida / ingrediente">
-      <button id="search-btn" class="btn">Procurar</button>
-      <button id="random-button" class="btn">Aleatório</button>
-    </form>
-    <section class="drinks-section">
-    </section>
-  </main>
-  <footer>
-    <nav>
-      <sectio class="rodape">
-        <div class="social-container">
-          <ul class="social-list">
-            <li class="list-item"><a target="_blank" href="https://www.linkedin.com/in/claudiocassimiro/">Cláudio</a></li>
-            <li class="list-item"><a target="_blank" href="https://www.linkedin.com/in/wilian-pereira-95732b3a/">Wilian</a>
-            </li>
-            <li class="list-item"><a target="_blank" href="https://www.linkedin.com/in/danielmondaini/">Daniel</a></li>
-            <li class="list-item"><a target="_blank" href="https://www.linkedin.com/in/iago-mesquita-bbb8028b/">Iago</a>
-            </li>
-            <li class="list-item"><a target="_blank" href="https://www.linkedin.com/in/ericksonsiqueira/">Erickson</a></li>
-            <li class="list-item"><a target="_blank" href="https://www.linkedin.com/in/jessebenevides/">Jessé</a></li>
-          </ul>
-        </div>
-        <p>A developer service by: Inimigos da produtividade</p>
-      </section>
-    </nav>
-  </footer>
   <script src="script.js"></script>
-
 </body>
-
 </html>
