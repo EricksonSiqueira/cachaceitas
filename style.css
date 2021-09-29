@@ -2,6 +2,7 @@
   --light-blue: #56dfff;
   --dark-blue: #202040;
   --neon-pink: #c734c7;
+  --dark-purple: #602080;
 }
 
 * {
@@ -191,6 +192,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  border-radius: 10px;
 }
 .top {
   width: 100%;
@@ -238,6 +240,8 @@ td {
 }
 
 #footer {
+  position: fixed;
+  bottom: 0;
   border-top: 1px solid black;
   display: flex;
   padding: 15px;
