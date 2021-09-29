@@ -17,7 +17,9 @@ body {
 #header {
   padding: 15px;
   display: flex;
-  justify-content: space-between;
+  position: relative;
+  top: 0;
+  justify-content: center;
   background-color: var(--dark-blue);
   align-items: center;
   color: white;
@@ -152,7 +154,7 @@ body {
   border: none;
   border-radius: 5px;
   margin-right: 7px;
-  transition: .8s;
+  transition: 0.8s;
 }
 
 .btn:hover {
@@ -161,9 +163,82 @@ body {
   cursor: pointer;
 }
 
-
 /* textarea:focus, input:focus, select:focus {
     box-shadow: 0 0 0 0;
     border: 0 none;
     outline: 0;
 }  */
+
+/*modal*/
+
+.drink-img-modal {
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+}
+.modal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+}
+.modal {
+  position: relative;
+  width: 700px;
+  height: 500px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.top {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.ingredients-names {
+  text-align: center;
+}
+.ingredients-table,
+th,
+td {
+  padding: 8px;
+  border: 1px solid black;
+}
+.modal-ingredients {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+.recipe-container {
+  margin: 0 20px;
+  text-align: center;
+}
+
+/* Botão show */
+
+.show {
+  display: flex;
+}
+.hide {
+  display: none;
+}
+.modal-close {
+  width: 50px;
+  height: 50px;
+  border-radius: 2px;
+  outline: none;
+  border: none;
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  background-color: #202040;
+  color: white;
+  cursor: pointer;
+}
