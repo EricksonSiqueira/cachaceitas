@@ -64,6 +64,11 @@ const getDrinkID = (target) => {
   }
 };
 
+const showModal = () => {
+  modal.classList.add('show');
+  modal.classList.remove('hide')
+};
+
 const getItensForPopUp = async ({ target }) => {
   const id = getDrinkID(target);
   const drink = await getDrinkById(id);
@@ -72,6 +77,7 @@ const getItensForPopUp = async ({ target }) => {
   const measures = getMeasuresArr(drink);
 
   createPopUpDrink(drink, ingredients, measures);
+  showModal();
 }
 
 const createPopUpDrink = ({ strInstructions, strDrinkThumb, strDrink, strGlass }, ingredients, measures) => {
@@ -121,9 +127,8 @@ const renderDrink = async (searchType, search) => {
   }
 }
 
-
 const hiddenModal = () => {
-  modal.classList.toggle("show");
+  modal.classList.remove("show");
   modal.classList.add('hide');
 }
 
