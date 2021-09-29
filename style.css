@@ -1,17 +1,17 @@
 :root {
-  --light-blue: #56DFFF;
+  --light-blue: #56dfff;
   --dark-blue: #202040;
   --neon-pink: #c734c7;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 #header {
@@ -41,14 +41,14 @@ body {
   list-style: none;
 }
 
-.list-item a{
+.list-item a {
   margin: 12px;
   text-decoration: none;
   color: inherit;
   min-width: 75px;
 }
 
-.list-item a:hover{
+.list-item a:hover {
   color: var(--neon-pink);
 }
 
@@ -57,13 +57,12 @@ body {
 }
 
 #back-ground {
-  background-image: url('./imagens/neon-1.png');
+  background-image: url("./imagens/neon-1.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
 
 /*content items*/
-
 
 #content {
   max-width: 1200px;
@@ -74,7 +73,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 100px;
   padding-bottom: 120px;
 }
 /* Items dos drinks*/
@@ -82,7 +80,7 @@ body {
 .drink {
   width: 250px;
   height: 250px;
-  background-color: #fff ;
+  background-color: #fff;
   border-radius: 20px;
   margin: 10px;
   display: flex;
@@ -102,3 +100,68 @@ body {
   margin-top: 10px;
   text-align: center;
 }
+
+#form-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 140px;
+}
+
+.select {
+  border-radius: 5px;
+  background-color: white;
+  margin-right: 7px;
+  padding: 10px;
+  width: 120px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  transition: 0.5s;
+}
+
+.select:focus {
+  box-shadow: 2px 2px 20px #0404d6d8;
+}
+
+#search-input {
+  margin-right: 10px;
+  border-radius: 5px;
+  padding: 12px;
+  border: none;
+  outline: none;
+  width: 300px;
+  transition: 0.5s;
+}
+
+#search-input::placeholder {
+  color: #20204059;
+  vertical-align: middle;
+  font-size: 17px;
+}
+
+#search-input:focus {
+  box-shadow: 2px 2px 20px #0404d6d8;
+}
+
+.btn {
+  width: 60px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 7px;
+  transition: .8s;
+}
+
+.btn:hover {
+  background-color: rgb(209, 208, 208);
+  box-shadow: 2px 2px 20px #0404d6d8;
+  cursor: pointer;
+}
+
+
+/* textarea:focus, input:focus, select:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}  */

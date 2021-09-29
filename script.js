@@ -120,7 +120,7 @@ const renderDrink = async (searchType, search) => {
 
 searchButton.addEventListener('click', (event) => {
   event.preventDefault();
-  const formSelec = document.querySelector(".form-select");
+  const formSelec = document.querySelector(".select");
   const searchSelected = formSelec.value;
   const inputValue = document.querySelector('#search-input').value;
 
