@@ -64,14 +64,15 @@ const getDrinkID = (target) => {
 const getItensForPopUp = async ({ target }) => {
   const id = getDrinkID(target);
   const drink = await getDrinkById(id);
-  console.log(drink);
-  const ingridients = getIngredientsArr(drink);
+
+  const ingredients = getIngredientsArr(drink);
   const measures = getMeasuresArr(drink);
-  console.log(measures);
+  
+  createPopUpDrink(drink, ingredients, measures);
 }
 
-const createPopUpDrink = () => {
-  //strInstructions strDrinkThumb strDrink strMeasure
+const createPopUpDrink = ({ strInstructions, strDrinkThumb, strDrink, strGlass },ingredients, measures) => {
+  
 }
 
 const createDrink = async ({ strDrinkThumb, strDrink, idDrink }) => {
