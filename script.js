@@ -32,23 +32,47 @@ const getDrinkById = async (id) => {
   return (data);
 }
 
+const getMeasuresArr = (drink) => {
+  const measures = [];
+  for (let i = 1; i <= 15; i += 1) {
+    const measure = drink.drinks[0][`strMeasure${i}`];
+    if (measure !== null) measures.push(measure);
+  }
+
+  return measures;
+}
+
 const getIngredientsArr = (drink) => {
   const ingredients = [];
   for (let i = 1; i <= 15; i += 1) {
     const ingredient = drink.drinks[0][`strIngredient${i}`];
     if (ingredient !== null) ingredients.push(ingredient);
   }
+
   return ingredients;
 }
 
-const getDrinkID = async ({ target }) => {
+const getDrinkID = (target) => {
   const div = document.querySelector('.drink');
   if (target !== div) {
-    return getDrinkById(target.closest('.drink').id);
+    return target.closest('.drink').id;
   } else {
-    return getDrinkById(target.id);
+    return target.id;
   }
 };
+
+const getItensForPopUp = async ({ target }) => {
+  const id = getDrinkID(target);
+  const drink = await getDrinkById(id);
+  console.log(drink);
+  const ingridients = getIngredientsArr(drink);
+  const measures = getMeasuresArr(drink);
+  console.log(measures);
+}
+
+const createPopUpDrink = () => {
+  //strInstructions strDrinkThumb strDrink strMeasure
+}
 
 const createDrink = async ({ strDrinkThumb, strDrink, idDrink }) => {
   const section = document.querySelector('.drinks-section');
@@ -56,7 +80,7 @@ const createDrink = async ({ strDrinkThumb, strDrink, idDrink }) => {
   const div = document.createElement('div');
   div.className = 'drink';
   div.id = idDrink;
-  div.addEventListener('click', getDrinkID);
+  div.addEventListener('click', getItensForPopUp);
   const img = document.createElement('img');
   img.src = strDrinkThumb;
   img.className = 'drink-img';
