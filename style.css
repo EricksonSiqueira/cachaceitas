@@ -172,7 +172,7 @@ body {
 /*modal*/
 
 .modal-container {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   width: 100vw;
@@ -241,4 +241,9 @@ td {
   background-color: #202040;
   color: white;
   cursor: pointer;
+/* 
+  background: url('imagens/icon-close.png');
+  background-position:center;
+  background-repeat:no-repeat;
+} */
 }
