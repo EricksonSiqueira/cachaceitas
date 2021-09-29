@@ -1,19 +1,26 @@
+:root {
+  --light-blue: #56dfff;
+  --dark-blue: #202040;
+  --neon-pink: #c734c7;
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 #header {
   padding: 15px;
   display: flex;
   justify-content: space-between;
-  background-color: #C2FAFE;
+  background-color: var(--dark-blue);
   align-items: center;
+  color: white;
 }
 
 .logo-container {
@@ -34,19 +41,127 @@ body {
   list-style: none;
 }
 
-.list-item a{
+.list-item a {
   margin: 12px;
   text-decoration: none;
   color: inherit;
   min-width: 75px;
 }
-/* 
-75px*/
-.list-item a:hover{
-  color: rgb(24, 24, 24);
+
+.list-item a:hover {
+  color: var(--neon-pink);
 }
 
 .social-container {
   margin-right: 20px;
 }
 
+#back-ground {
+  background-image: url("./imagens/neon-1.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+/*content items*/
+
+#content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.drinks-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 120px;
+}
+/* Items dos drinks*/
+
+.drink {
+  width: 250px;
+  height: 250px;
+  background-color: #fff;
+  border-radius: 20px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.815);
+}
+
+.drink-img {
+  width: 170px;
+  height: 150px;
+  border-radius: 10px;
+}
+
+.drink span {
+  margin-top: 10px;
+  text-align: center;
+}
+
+#form-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 140px;
+}
+
+.select {
+  border-radius: 5px;
+  background-color: white;
+  margin-right: 7px;
+  padding: 10px;
+  width: 120px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  transition: 0.5s;
+}
+
+.select:focus {
+  box-shadow: 2px 2px 20px #0404d6d8;
+}
+
+#search-input {
+  margin-right: 10px;
+  border-radius: 5px;
+  padding: 12px;
+  border: none;
+  outline: none;
+  width: 300px;
+  transition: 0.5s;
+}
+
+#search-input::placeholder {
+  color: #20204059;
+  vertical-align: middle;
+  font-size: 17px;
+}
+
+#search-input:focus {
+  box-shadow: 2px 2px 20px #0404d6d8;
+}
+
+.btn {
+  width: 60px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 7px;
+  transition: .8s;
+}
+
+.btn:hover {
+  background-color: rgb(209, 208, 208);
+  box-shadow: 2px 2px 20px #0404d6d8;
+  cursor: pointer;
+}
+
+
+/* textarea:focus, input:focus, select:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}  */
