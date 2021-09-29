@@ -56,10 +56,12 @@ body {
   margin-right: 20px;
 }
 
-#back-ground {
+body {
+  top: 0;
+  left: 0;
   background-image: url("./imagens/neon-1.png");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: 100vw 100vh;
+  background-attachment: fixed;
 }
 
 /*content items*/
