@@ -165,7 +165,7 @@ body {
 }
 
 /*modal*/
-
+/* Utilizando o video https://www.youtube.com/watch?v=fu-enUG2VEE&t=1313s da origamid como exemplo*/
 .modal-container {
   display: none;
   justify-content: center;
@@ -239,12 +239,27 @@ td {
   cursor: pointer;
 }
 
+@keyframes modalAnimation {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -60px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.show .modal {
+  animation: modalAnimation .3s;
+}
+
 #footer {
   position: fixed;
   bottom: 0;
   border-top: 1px solid black;
   display: flex;
-  padding: 15px;
+  padding: 10px;
   justify-content: center;
   text-align: center;
   width: 100%;
