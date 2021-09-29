@@ -2,6 +2,7 @@
   --light-blue: #56dfff;
   --dark-blue: #202040;
   --neon-pink: #c734c7;
+  --dark-purple: #602080;
 }
 
 * {
@@ -17,7 +18,9 @@ body {
 #header {
   padding: 15px;
   display: flex;
-  justify-content: space-between;
+  position: relative;
+  top: 0;
+  justify-content: center;
   background-color: var(--dark-blue);
   align-items: center;
   color: white;
@@ -56,10 +59,12 @@ body {
   margin-right: 20px;
 }
 
-#back-ground {
+body {
+  top: 0;
+  left: 0;
   background-image: url("./imagens/neon-1.png");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: 100vw 100vh;
+  background-attachment: fixed;
 }
 
 /*content items*/
@@ -150,7 +155,7 @@ body {
   border: none;
   border-radius: 5px;
   margin-right: 7px;
-  transition: .8s;
+  transition: 0.8s;
 }
 
 .btn:hover {
@@ -159,9 +164,105 @@ body {
   cursor: pointer;
 }
 
+/*modal*/
+/* Utilizando o video https://www.youtube.com/watch?v=fu-enUG2VEE&t=1313s da origamid como exemplo*/
+.modal-container {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+}
 
-/* textarea:focus, input:focus, select:focus {
-    box-shadow: 0 0 0 0;
-    border: 0 none;
-    outline: 0;
-}  */
+.drink-img-modal {
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+}
+.modal {
+  position: relative;
+  width: 700px;
+  height: 500px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 10px;
+}
+.top {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.ingredients-names {
+  text-align: center;
+}
+.ingredients-table,
+th,
+td {
+  padding: 8px;
+  border: 1px solid black;
+}
+.modal-ingredients {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+.recipe-container {
+  margin: 0 20px;
+  text-align: center;
+}
+
+.show {
+  display: flex;
+}
+.hide {
+  display: none;
+}
+/* Botão show */
+.modal-close {
+  width: 50px;
+  height: 50px;
+  border-radius: 2px;
+  outline: none;
+  border: none;
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  background-color: var(--dark-blue);
+  color: white;
+  cursor: pointer;
+}
+
+@keyframes modalAnimation {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -60px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.show .modal {
+  animation: modalAnimation .3s;
+}
+
+#footer {
+  position: fixed;
+  bottom: 0;
+  border-top: 1px solid black;
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  background-color: var(--dark-blue);
+  color: white;
+}

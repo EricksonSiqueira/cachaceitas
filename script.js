@@ -1,5 +1,7 @@
 const searchButton = document.querySelector('#search-btn');
 const randomButton = document.querySelector('#random-button');
+const hiddenButton = document.querySelector('.modal-close');
+const modal = document.querySelector('#modal-drink');
 
 const getDrinkByName = async (drink) => {
   const API_URL = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=';
@@ -24,6 +26,7 @@ const getRandomDrink = async () => {
 
   return data;
 };
+
 
 const getDrinkById = async (id) => {
   const API_URL = 'https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=';
@@ -61,18 +64,84 @@ const getDrinkID = (target) => {
   }
 };
 
+const showModal = () => {
+  modal.classList.add('show');
+  modal.classList.remove('hide')
+};
+
 const getItensForPopUp = async ({ target }) => {
   const id = getDrinkID(target);
-  const drink = await getDrinkById(id);
-
-  const ingredients = getIngredientsArr(drink);
-  const measures = getMeasuresArr(drink);
-  
+  const drinkObj = await getDrinkById(id);
+  const drink = drinkObj.drinks[0];
+  const ingredients = getIngredientsArr(drinkObj);
+  const measures = getMeasuresArr(drinkObj);
+  console.log(drink);
   createPopUpDrink(drink, ingredients, measures);
+  showModal();
 }
 
-const createPopUpDrink = ({ strInstructions, strDrinkThumb, strDrink, strGlass },ingredients, measures) => {
+const generateDefaultTable = () => {
+  const tableModal = document.querySelector('.ingredients-table');
+  tableModal.innerHTML = '';
+  const tr = document.createElement('tr');
+  const thIngridient = document.createElement('th');
+  const thMeasure = document.createElement('th');
+
+  thIngridient.innerHTML = 'Ingredientes';
+  thMeasure.innerHTML = 'Quantidades';
+
+  tr.appendChild(thIngridient);
+  tr.appendChild(thMeasure);
+
+  tableModal.appendChild(tr);
+}
+
+const createPopUpDrink = ({ strInstructions, strDrinkThumb, strDrink, }, ingredients, measures) => {
+  const modal = document.querySelector('#modal-drink');
+  const topModal = document.querySelector('.top');
+  const imgModal = document.querySelector('.drink-img-modal');
+  const tableModal = document.querySelector('.ingredients-table');
+  const drinkNameModal = document.querySelector('.drink-name');
+  const recipeModal = document.querySelector('.recipe');
   
+  imgModal.src = strDrinkThumb;
+  drinkNameModal.innerHTML = strDrink;
+  generateDefaultTable();
+  recipeModal.innerHTML = strInstructions;
+
+  ingredients.forEach((ingredient, index) => {
+    const tr = document.createElement('tr');
+    const tdIngredient = document.createElement('td');
+    const tdMeasure = document.createElement('td');
+    tdIngredient.innerHTML = ingredient;
+
+    if(measures[index]){
+      tdMeasure.innerHTML = measures[index];
+    } else {
+      tdMeasure.innerHTML = 'A gosto';
+    }
+
+    tr.appendChild(tdIngredient);
+    tr.appendChild(tdMeasure);
+
+    tableModal.appendChild(tr);
+  });
+
+  // <div id="modal-drink" class="modal-container">
+  //   <div class="modal">
+  //     <div class="top">
+  //       <img class="drink-img-modal" src="https://www.thecocktaildb.com/images/media/drink/ypl13s1504890158.jpg"
+  //         alt="imagem do drink">
+  //       <div class ="ingredients-names">
+  //       <h3 class ="drink-name">Nome do drink</h3>
+  //       <table class ="ingredients-table">
+  //       <tr>
+  //       <th>Ingredientes</th>
+  //       <th>Quantidades</th>
+  //       </tr>
+  //       </table>
+  //       </div>
+  //     </div>
 }
 
 const createDrink = async ({ strDrinkThumb, strDrink, idDrink }) => {
@@ -117,6 +186,18 @@ const renderDrink = async (searchType, search) => {
 
   }
 }
+
+const hiddenModal = () => {
+  modal.classList.remove("show");
+  modal.classList.add('hide');
+}
+
+modal.addEventListener('click', ( {target} ) => {
+  if (target.classList.contains('modal-container')){
+    hiddenModal();
+  }
+});
+hiddenButton.addEventListener('click', hiddenModal);
 
 searchButton.addEventListener('click', (event) => {
   event.preventDefault();
