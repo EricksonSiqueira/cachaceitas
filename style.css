@@ -1,3 +1,9 @@
+:root {
+  --light-blue: #56DFFF;
+  --dark-blue: #202040;
+  --neon-pink: #c734c7;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -12,8 +18,9 @@ body {
   padding: 15px;
   display: flex;
   justify-content: space-between;
-  background-color: #C2FAFE;
+  background-color: var(--dark-blue);
   align-items: center;
+  color: white;
 }
 
 .logo-container {
@@ -40,20 +47,25 @@ body {
   color: inherit;
   min-width: 75px;
 }
-/* 
-75px*/
+
 .list-item a:hover{
-  color: rgb(24, 24, 24);
+  color: var(--neon-pink);
 }
 
 .social-container {
   margin-right: 20px;
 }
 
+#back-ground {
+  background-image: url('./imagens/neon-1.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
 /*content items*/
 
+
 #content {
-  background-color: green;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -62,6 +74,8 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 100px;
+  padding-bottom: 120px;
 }
 /* Items dos drinks*/
 
@@ -88,4 +102,3 @@ body {
   margin-top: 10px;
   text-align: center;
 }
-
