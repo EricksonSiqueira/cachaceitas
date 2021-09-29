@@ -163,12 +163,6 @@ body {
   cursor: pointer;
 }
 
-/* textarea:focus, input:focus, select:focus {
-    box-shadow: 0 0 0 0;
-    border: 0 none;
-    outline: 0;
-}  */
-
 /*modal*/
 
 .modal-container {
@@ -238,12 +232,18 @@ td {
   position: absolute;
   top: -30px;
   right: -30px;
-  background-color: #202040;
+  background-color: var(--dark-blue);
   color: white;
   cursor: pointer;
-/* 
-  background: url('imagens/icon-close.png');
-  background-position:center;
-  background-repeat:no-repeat;
-} */
+}
+
+#footer {
+  border-top: 1px solid black;
+  display: flex;
+  padding: 15px;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  background-color: var(--dark-blue);
+  color: white;
 }
