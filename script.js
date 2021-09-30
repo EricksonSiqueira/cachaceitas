@@ -151,11 +151,12 @@ const createDrink = async ({ strDrinkThumb, strDrink, idDrink }) => {
   div.addEventListener('click', getItensForPopUp);
   const img = document.createElement('img');
   img.src = strDrinkThumb;
-  img.className = 'drink-img';
+  img.className = 'drink-img pink-neon';
   const span = document.createElement('span');
+  span.classList.add('green-neon')
   span.innerText = strDrink;
-  div.appendChild(img);
   div.appendChild(span);
+  div.appendChild(img);
   section.appendChild(div);
 }
 
