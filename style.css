@@ -216,6 +216,16 @@ td {
 .recipe-container {
   margin: 0 20px;
   text-align: center;
+  border: 1px solid black;
+  min-height: 40%;
+}
+
+.recipe-container h3 {
+  padding: 8px 0;
+}
+
+.recipe {
+  padding-top: 12px;
 }
 
 .show {
@@ -234,7 +244,7 @@ td {
   position: absolute;
   top: -30px;
   right: -30px;
-  background-color: var(--dark-blue);
+  background-color: red;
   color: white;
   cursor: pointer;
 }
