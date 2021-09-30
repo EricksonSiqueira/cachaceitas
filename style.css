@@ -176,6 +176,31 @@ body {
   cursor: pointer;
 }
 
+.blue-neon {
+  box-shadow: 0px 0px 30px rgba(0, 255, 255, 0.7);
+  border: 2px solid var(--light-blue);
+}
+
+.blue-neon-sm {
+  box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.7);
+  border: 2px solid var(--light-blue);
+}
+
+.pink-neon {
+  border: 2px solid var(--neon-pink);
+  box-shadow: 0px 0px 30px rgba(247, 2, 226, 0.6);
+}
+
+.green-neon {
+  border: 2px solid rgb(60, 255, 0);
+  box-shadow: 0px 0px 30px rgba(60, 255, 0, 0.6);
+}
+
+.yellow-neon {
+  box-shadow: 0px 0px 30px rgba(255, 255, 0,0.6);
+  border: 2px solid yellow;
+}
+
 /*modal*/
 /* Utilizando o video https://www.youtube.com/watch?v=fu-enUG2VEE&t=1313s da origamid como exemplo*/
 .modal-container {
@@ -216,8 +241,6 @@ body {
   top: -25px;
   font-weight: bold;
   font-size: 25px;
-  border: 2px solid rgb(51, 255, 0);
-  box-shadow: 0px 0px 30px rgba(60, 255, 0, 0.6);
   padding: 0 15px;
   border-radius: 5px;
   position: absolute;
@@ -228,16 +251,12 @@ body {
   width: 250px;
   height: 250px;
   border-radius: 5px;
-  box-shadow: 0px 0px 40px rgba(0, 255, 255, 0.7);
   position: absolute;
   top: 50px;
   left: 30px;
-  border: 2px solid var(--light-blue);
 }
 
 .ingredients-table {
-  box-shadow: 0px 0px 30px rgba(0, 255, 255, 0.7);
-  border: 2px solid var(--light-blue);
   position: absolute;
   top: 50px;
   right: 30px;
@@ -252,8 +271,12 @@ body {
 th,
 td {
   padding: 8px;
+  box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.7);
   border: 2px solid var(--light-blue);
-  box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.5);
+}
+
+th {
+  padding: 10px 20px
 }
 
 .modal-ingredients {
@@ -265,15 +288,14 @@ td {
   margin: 0 20px;
   text-align: center;
   width: 800px;
-  border: 2px solid var(--neon-pink);
   border-radius: 4px;
-  box-shadow: 0px 0px 25px rgba(247, 2, 226, 0.6);
   min-height: 40%;
   position: absolute;
   bottom: -80px;
   left: -65px;
   background-color: var(--dark-blue);
-
+  display: flex;
+  flex-direction: column;
 }
 
 hr {
@@ -282,6 +304,18 @@ hr {
 
 .recipe {
   padding: 12px;
+}
+
+.recipe-container > h3 {
+  margin-top: 10px;
+}
+
+.line {
+  width: 30%;
+  height: 1px;
+  background-color: white;
+  align-self: center;
+  margin: 10px 0;
 }
 
 .show {

@@ -87,8 +87,8 @@ const generateDefaultTable = () => {
   const thIngridient = document.createElement('th');
   const thMeasure = document.createElement('th');
 
-  thIngridient.innerHTML = 'Ingredientes';
-  thMeasure.innerHTML = 'Quantidades';
+  thIngridient.innerHTML = 'Ingredients';
+  thMeasure.innerHTML = 'Measures';
 
   tr.appendChild(thIngridient);
   tr.appendChild(thMeasure);
@@ -97,8 +97,6 @@ const generateDefaultTable = () => {
 }
 
 const createPopUpDrink = ({ strInstructions, strDrinkThumb, strDrink, }, ingredients, measures) => {
-  const modal = document.querySelector('#modal-drink');
-  const topModal = document.querySelector('.top');
   const imgModal = document.querySelector('.drink-img-modal');
   const tableModal = document.querySelector('.ingredients-table');
   const drinkNameModal = document.querySelector('.drink-name');
@@ -118,7 +116,7 @@ const createPopUpDrink = ({ strInstructions, strDrinkThumb, strDrink, }, ingredi
     if(measures[index]){
       tdMeasure.innerHTML = measures[index];
     } else {
-      tdMeasure.innerHTML = 'A gosto';
+      tdMeasure.innerHTML = '-';
     }
 
     tr.appendChild(tdIngredient);
