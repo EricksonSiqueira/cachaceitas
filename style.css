@@ -13,6 +13,17 @@
 
 body {
   font-family: "Montserrat", sans-serif;
+  top: 0;
+  left: 0;
+  background-image: url("./imagens/neon-1.png");
+  background-size: 100vw 100vh;
+  background-attachment: fixed;
+  background-position: top 100px right 0;
+}
+
+#header-space {
+  height: 110px;
+  width: 100%;
 }
 
 #header {
@@ -24,6 +35,8 @@ body {
   background-color: var(--dark-blue);
   align-items: center;
   color: white;
+  position: fixed;
+  width: 100%;
 }
 
 .logo-container {
@@ -59,14 +72,6 @@ body {
   margin-right: 20px;
 }
 
-body {
-  top: 0;
-  left: 0;
-  background-image: url("./imagens/neon-1.png");
-  background-size: 100vw 100vh;
-  background-attachment: fixed;
-}
-
 /*content items*/
 
 #content {
@@ -79,6 +84,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   padding-bottom: 120px;
+  min-height: 70vh;
 }
 /* Items dos drinks*/
 
@@ -265,7 +271,6 @@ td {
 }
 
 #footer {
-  position: fixed;
   bottom: 0;
   border-top: 1px solid black;
   display: flex;
