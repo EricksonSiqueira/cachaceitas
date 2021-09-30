@@ -16,7 +16,7 @@ body {
   top: 0;
   left: 0;
   background-image: url("./imagens/neon-1.png");
-  background-size: 130vw 90vh;
+  background-size: 130vw 90%;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -191,35 +191,64 @@ body {
   z-index: 2000;
 }
 
-.drink-img-modal {
-  width: 200px;
-  height: 200px;
-  border-radius: 5px;
-}
 .modal {
   position: relative;
   width: 700px;
   height: 500px;
-  background-color: white;
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   border-radius: 10px;
+  background-color: var(--dark-blue);
+  color: white;
+  box-shadow: 0 0 30px rgba(211, 0, 253, 0.753);
 }
+
 .top {
   width: 100%;
   display: flex;
   justify-content: space-around;
 }
+
+.drink-name {
+  align-self: flex-start;
+  padding: 8px 0;
+  top: 0;
+  right: 35%;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.drink-img-modal {
+  width: 250px;
+  height: 250px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 40px rgba(0, 255, 255, 0.7);
+  position: absolute;
+  top: 50px;
+  left: 30px;
+  border: 2px solid rgb(0, 255, 255);
+}
+
+.ingredients-table {
+  box-shadow: 0px 0px 50px rgba(0, 255, 255, 0.7);
+  border: 2px solid var(--light-blue);
+  position: absolute;
+  top: 50px;
+  right: 30px;
+  border-radius: 5px;
+  padding: 10px;
+}
 .ingredients-names {
   text-align: center;
 }
-.ingredients-table,
+
 th,
 td {
   padding: 8px;
-  border: 1px solid black;
+  border: 2px solid var(--light-blue);
+  box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.5);
 }
+
 .modal-ingredients {
   display: flex;
   justify-content: space-between;
@@ -228,16 +257,24 @@ td {
 .recipe-container {
   margin: 0 20px;
   text-align: center;
-  border: 1px solid black;
+  width: 800px;
+  border: 2px solid var(--neon-pink);
+  border-radius: 4px;
+  box-shadow: 0px 0px 25px rgba(247, 2, 226, 0.6);
   min-height: 40%;
+  position: absolute;
+  bottom: -50px;
+  left: -65px;
+  background-color: var(--dark-blue);
+
 }
 
-.recipe-container h3 {
-  padding: 8px 0;
+hr {
+  color: #c734c7;
 }
 
 .recipe {
-  padding-top: 12px;
+  padding: 12px;
 }
 
 .show {
@@ -259,6 +296,7 @@ td {
   background-color: red;
   color: white;
   cursor: pointer;
+  font-size: 18px;
 }
 
 @keyframes modalAnimation {
@@ -286,4 +324,8 @@ td {
   width: 100%;
   background-color: var(--dark-blue);
   color: white;
+}
+
+.neon-tittle {
+  text-shadow: 0 0 100px rgba(0, 255, 179, 1);
 }
