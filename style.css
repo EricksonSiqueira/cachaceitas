@@ -200,7 +200,7 @@ body {
   border-radius: 10px;
   background-color: var(--dark-blue);
   color: white;
-  box-shadow: 0 0 30px rgba(211, 0, 253, 0.753);
+  box-shadow: 0 0 10px rgba(211, 0, 253, 0.753);
 }
 
 .top {
@@ -212,10 +212,16 @@ body {
 .drink-name {
   align-self: flex-start;
   padding: 8px 0;
-  top: 0;
-  right: 35%;
+  right: 45%;
+  top: -25px;
   font-weight: bold;
   font-size: 25px;
+  border: 2px solid rgb(51, 255, 0);
+  box-shadow: 0px 0px 30px rgba(60, 255, 0, 0.6);
+  padding: 0 15px;
+  border-radius: 5px;
+  position: absolute;
+  background-color: var(--dark-blue);
 }
 
 .drink-img-modal {
@@ -226,17 +232,18 @@ body {
   position: absolute;
   top: 50px;
   left: 30px;
-  border: 2px solid rgb(0, 255, 255);
+  border: 2px solid var(--light-blue);
 }
 
 .ingredients-table {
-  box-shadow: 0px 0px 50px rgba(0, 255, 255, 0.7);
+  box-shadow: 0px 0px 30px rgba(0, 255, 255, 0.7);
   border: 2px solid var(--light-blue);
   position: absolute;
   top: 50px;
   right: 30px;
   border-radius: 5px;
   padding: 10px;
+  /* animation: neonAnimation 1.5s infinite alternate ease-in-out; */
 }
 .ingredients-names {
   text-align: center;
@@ -263,7 +270,7 @@ td {
   box-shadow: 0px 0px 25px rgba(247, 2, 226, 0.6);
   min-height: 40%;
   position: absolute;
-  bottom: -50px;
+  bottom: -80px;
   left: -65px;
   background-color: var(--dark-blue);
 
@@ -310,6 +317,15 @@ hr {
   }
 }
 
+@keyframes neonAnimation {
+  from {
+    box-shadow: 0px 0px 50px rgba(0, 255, 255, 0.2);
+  }
+  to {
+    box-shadow: 0px 0px 50px rgba(0, 255, 255, 0.7);
+  }
+}
+
 .show .modal {
   animation: modalAnimation .3s;
 }
@@ -326,6 +342,3 @@ hr {
   color: white;
 }
 
-.neon-tittle {
-  text-shadow: 0 0 100px rgba(0, 255, 179, 1);
-}
