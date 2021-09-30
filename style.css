@@ -320,7 +320,7 @@ th {
   min-height: 40%;
   position: absolute;
   bottom: -80px;
-  left: -65px;
+  left: -70px;
   background-color: var(--dark-blue);
   display: flex;
   flex-direction: column;
