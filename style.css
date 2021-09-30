@@ -100,6 +100,7 @@ body {
   justify-content: center;
   align-items: center;
   box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
 }
 
 .drink-img {
@@ -115,7 +116,6 @@ body {
   margin-top: 10px;
   text-align: center;
   font-weight: bold;
-  
 }
 
 #form-search {
