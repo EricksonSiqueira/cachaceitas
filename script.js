@@ -151,7 +151,7 @@ const createDrink = async ({ strDrinkThumb, strDrink, idDrink }) => {
   div.addEventListener('click', getItensForPopUp);
   const img = document.createElement('img');
   img.src = strDrinkThumb;
-  img.className = 'drink-img pink-neon';
+  img.className = 'drink-img';
   const span = document.createElement('span');
   span.classList.add('green-neon')
   span.innerText = strDrink;
