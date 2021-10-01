@@ -15,21 +15,24 @@
 </head>
 
 <body>
+  <div id="header-space"></div>
   <header id="header">
-    <div class="logo-container">
-      <img src="./imagens/cachaceitasv3.png" class="logo-img"></img>
+    <div class="header-items">
+      <div class="logo-container">
+        <img src="./imagens/cachaceitasv3.png" class="logo-img"></img>
+      </div>
+      <form id="form-search">
+        <select class="select">
+          <option value="name">Drink</option>
+          <option value="ingredient">Ingredient</option>
+        </select>
+        <input id="search-input" type="text" placeholder="drink / ingredient">
+        <button id="search-btn" class="btn">Search</button>
+        <button id="random-button" class="btn">Random</button>
+      </form>
     </div>
   </header>
   <main id="content">
-    <form id="form-search">
-      <select class="select">
-        <option value="name">Bebida</option>
-        <option value="ingredient">Ingrediente</option>
-      </select>
-      <input id="search-input" type="text" placeholder="bebida / ingrediente">
-      <button id="search-btn" class="btn">Procurar</button>
-      <button id="random-button" class="btn">Aleatório</button>
-    </form>
     <section class="drinks-section">
     </section>
   </main>
@@ -55,19 +58,21 @@
   <div id="modal-drink" class="modal-container">
     <div class="modal">
       <div class="top">
-        <img class="drink-img-modal" src="https://www.thecocktaildb.com/images/media/drink/ypl13s1504890158.jpg"
+        <img class="drink-img-modal yellow-neon" src="https://www.thecocktaildb.com/images/media/drink/ypl13s1504890158.jpg"
           alt="imagem do drink">
           <div class="ingredients-names">
-            <h3 class="drink-name">Nome do drink</h3>
-            <table class="ingredients-table">
+            <h3 class="drink-name green-neon"></h3>
+            <table class="ingredients-table blue-neon">
               <tr>
-                <th>Ingredientes</th>
-                <th>Quantidades</th>
+                <th></th>
+                <th></th>
               </tr>
             </table>
           </div>
       </div>
-      <div class="recipe-container">
+      <div class="recipe-container pink-neon">
+        <h3>Recipe</h3>
+        <div class="line"></div>
         <p class="recipe">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore commodi, hic officiis nemo quam quis minima debitis dicta repudiandae sunt pariatur vel. Minus distinctio natus debitis iure adipisci! Architecto, neque.</p>
       </div>
       <button class="modal-close">X</button>
