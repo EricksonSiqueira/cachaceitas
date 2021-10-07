@@ -465,4 +465,32 @@ hr {
     margin-top: 10px;
     margin-right: 0px;
   }
+  .drinks-section {
+    margin-left: 10%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #form-search {
+    justify-content: flex-start;
+    margin-left: 5%;
+  }
+  #header-space {
+    height: 170px;
+  }
+  body {
+    min-width: 100%;
+  }
+  .drinks-section {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .drinks-section {
+    margin-left: 20%;
+  }
+  body {
+    background-size: 150vw 93%;
+  }
 }
